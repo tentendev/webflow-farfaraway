@@ -11,7 +11,7 @@ jobs:
       - name: Setup deno
         uses: denoland/setup-deno@main
         with:
-          deno-version: v1.10.x
+          deno-version: v1.33.x
       - name: Check out repo
         uses: actions/checkout@v3.3.1
       - name: Fetch data
