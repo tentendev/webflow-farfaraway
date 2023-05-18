@@ -1,5 +1,5 @@
 import { readTXT, writeTXT } from "https://deno.land/x/flat@0.0.15/mod.ts";
-import { DOMParser } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
+import { DOMParser } from "https://deno.land/x/deno_dom@v0.1.38/deno-dom-wasm.ts";
 
 const filename = Deno.args[0];
 const html = await readTXT(filename);
