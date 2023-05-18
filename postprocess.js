@@ -1,7 +1,3 @@
-// This can be a typescript file as well
-
-// Helper library written for useful postprocessing tasks with Flat Data
-// Has helper functions for manipulating csv, txt, json, excel, zip, and image files
 import {
   readTXT,
   writeTXT,
@@ -12,10 +8,11 @@ import {
   Element,
 } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
 
-// Step 1: Read the downloaded_filename JSON
 const filename = Deno.args[0];
 const html = await readTXT(filename);
-console.log(html);
+
+await removeFile(filename);
+await removeFile("home-head.html");
 
 const doc = new DOMParser().parseFromString(html, "text/html");
 
